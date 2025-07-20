@@ -38,7 +38,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: ${{ github.workspace}}
+          cache-dependency-path: ${{ github.workspace }}
 
       - name: npm init
         run: npm init
@@ -52,7 +52,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: my-website/build
 
   # Deployment job
   deploy:
